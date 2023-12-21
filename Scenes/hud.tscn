@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://k5kj1ggn37sh"]
+
+[ext_resource type="FontFile" uid="uid://ppgcds55xqo3" path="res://assets/fonts/Xolonium-Regular.ttf" id="1_illfy"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_illfy")
+text = "73"
+
+[node name="Message" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StartButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MessageTimer" type="Timer" parent="."]
