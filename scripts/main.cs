@@ -13,7 +13,11 @@ public partial class main : Node
 		GetNode<Timer>("ScoreTimer").Stop();
 		
 		GetNode<hud>("HUD").ShowGameOver();
-		GD.Print("test");
+		//GD.Print("test");
+		
+		// Audio
+		GetNode<AudioStreamPlayer2D>("Music").Stop();
+		GetNode<AudioStreamPlayer2D>("DeathSound").Play();
 	}
 	
 	public void NewGame()
@@ -29,6 +33,9 @@ public partial class main : Node
 		var hud = GetNode<hud>("HUD");
 		hud.UpdateScore(_score);
 		hud.ShowMessage("Get Ready!");
+		
+		// Audio
+		GetNode<AudioStreamPlayer2D>("Music").Play();
 	}
 
 	private void _on_mob_timer_timeout()
